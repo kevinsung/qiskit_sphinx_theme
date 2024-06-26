@@ -37,9 +37,16 @@
 <div class="page">
   <header class="mobile-header">
     <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
+      {#- QISKIT CHANGE: start. -#}
+      <label class="theme-toggle nav-overlay-icon" for="__navigation">
         <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+        <i class="icon">
+          <svg class="theme-icon-when-light"><use href="#svg-menu"></use></svg>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-menu"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-menu-dark-mode"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-menu-dark-mode"></use></svg>
+        </i>
+      {#- QISKIT CHANGE: end. -#}
       </label>
     </div>
     <div class="header-center">
@@ -55,9 +62,16 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon{% if furo_hide_toc %} no-toc{% endif %}" for="__toc">
+      {#- QISKIT CHANGE: start. -#}
+      <label class="theme-toggle toc-overlay-icon toc-header-icon{% if furo_hide_toc %} no-toc{% endif %}" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        <i class="icon">
+          <svg class="theme-icon-when-light"><use href="#svg-toc"></use></svg>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-toc"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-toc-dark-mode"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-toc-dark-mode"></use></svg>
+        </i>
+      {#- QISKIT CHANGE: end. -#}
       </label>
     </div>
   </header>
