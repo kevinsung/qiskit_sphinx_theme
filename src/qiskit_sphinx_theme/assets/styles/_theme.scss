@@ -1,0 +1,55 @@
+/* This code is a Qiskit project.
+ *
+ * (C) Copyright IBM 2023.
+ *
+ * This code is licensed under the Apache License, Version 2.0. You may
+ * obtain a copy of this license in the LICENSE.txt file in the root directory
+ * of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Any modifications or derivative works of this code must retain this
+ * copyright notice, and modified files need to carry a notice indicating
+ * that they have been altered from the originals.
+ */
+
+.theme-dependent {
+  display: flex;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.theme-dependent svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: var(--color-foreground-primary);
+  display: none;
+}
+
+body[data-theme="auto"] {
+  .theme-dependent svg.theme-icon-when-auto-light {
+    display: block;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .theme-dependent svg.theme-icon-when-auto-dark {
+      display: block;
+    }
+
+    .theme-dependent svg.theme-icon-when-auto-light {
+      display: none;
+    }
+  }
+}
+
+body[data-theme="dark"] {
+  .theme-dependent svg.theme-icon-when-dark {
+    display: block;
+  }
+}
+
+body[data-theme="light"] {
+  .theme-dependent svg.theme-icon-when-light {
+    display: block;
+  }
+}
