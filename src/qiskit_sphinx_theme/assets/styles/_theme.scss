@@ -11,6 +11,10 @@
  * that they have been altered from the originals.
  */
 
+ // Copy of logic for theme-toggle from furo/assets/styles/base/_theme.sass.
+ // We create a new class with a different name because theme-toggle gets turned
+ // into a button
+
 .theme-dependent {
   display: flex;
   cursor: pointer;
