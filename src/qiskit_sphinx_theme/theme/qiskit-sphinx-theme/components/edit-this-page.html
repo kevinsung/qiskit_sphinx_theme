@@ -10,8 +10,13 @@
 
 {%- macro furo_edit_button(url) -%}
 <div class="edit-this-page">
-  <a class="muted-link" href="{{ url }}" title="{{ _("Edit this page") }}">
-    <svg><use href="#svg-pencil"></use></svg>
+  {#- QISKIT CHANGE: start. -#}
+  <a class="muted-link theme-dependent" href="{{ url }}" title="{{ _("Edit this page") }}">
+    <svg class="theme-icon-when-light"><use href="#svg-pencil"></use></svg>
+    <svg class="theme-icon-when-auto-light"><use href="#svg-pencil"></use></svg>
+    <svg class="theme-icon-when-dark"><use href="#svg-pencil-dark-mode"></use></svg>
+    <svg class="theme-icon-when-auto-dark"><use href="#svg-pencil-dark-mode"></use></svg>
+    {#- QISKIT CHANGE: end. -#}
     <span class="visually-hidden">{{ _("Edit this page") }}</span>
   </a>
 </div>
